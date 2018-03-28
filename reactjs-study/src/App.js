@@ -33,12 +33,12 @@ class Board extends React.Component {
     return <Square value={this.state.squares[i]} 
                     onClick={() => this.handleClick(i)}/>;
   };
-
+  
   render() {
-
+    const status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
     return (
       <div>
-        <div className="status">  {this.props.value}</div>
+        <div className="status">  {status}</div>
         <div className="board-row">
           
           {this.renderSquare(0)}
