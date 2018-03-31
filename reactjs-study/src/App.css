@@ -87,7 +87,11 @@ ol, ul {
 }
 
 .game-info {
-  margin-left: 20px;
+  height: 100px;
+  margin-bottom: 10px;
+  font-size: 34px;
+  font-weight: bold;
+  text-decoration-color: red;
 }
 
 @keyframes App-logo-spin {
