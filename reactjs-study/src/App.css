@@ -59,7 +59,7 @@ ol, ul {
   border: 1px solid #999;
   float: left;
   font-size: 50px;
-  font-weight: bold;
+
   line-height: 34px;
   height: 34px;
   margin-right: -1px;
@@ -72,6 +72,10 @@ ol, ul {
 
 .square:focus {
   outline: none;
+}
+
+.bold-text {
+  font-weight: bold;
 }
 
 .kbd-navigation .square:focus {
