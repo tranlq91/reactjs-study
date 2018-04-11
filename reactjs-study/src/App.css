@@ -71,7 +71,7 @@ ol, ul {
 }
 
 .square-boil {
-  background: yellow !important
+  background: yellow;
 
 }
 .square:focus {

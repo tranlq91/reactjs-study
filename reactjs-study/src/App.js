@@ -97,10 +97,19 @@ class Game extends React.Component {
   }
   
   jumpTo(step) {
+    
     this.setState({
       stepNumber: step,
       xIsNext: (step % 2) === 0,
     });
+
+    const history = this.state.history.slice(0, this.state.stepNumber);
+    const current = history[history.length - 1];
+    const squares = current.squares.slice();
+    for(let i = 0; i < squares.length; i++) {
+      if(squares[i])
+        squares[i].isWinner = false;
+    }
   }
 
   render() {
