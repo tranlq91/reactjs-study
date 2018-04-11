@@ -1,4 +1,4 @@
-import React, { Component }  from  'react';
+import React from  'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -8,7 +8,7 @@ function Square (props) {
     let className = "square";
     if(props.value){
       text = props.value.text;
-      if (props.value.isWinner == true) {
+      if (props.value.isWinner === true) {
         className += " square-boil";
         console.log('this.props', props.value);
         console.log('className', className);
