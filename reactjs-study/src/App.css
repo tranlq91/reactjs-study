@@ -82,6 +82,9 @@ ol, ul {
   font-weight: bold;
 }
 
+.chosenStep {
+  background: greenyellow;
+}
 .kbd-navigation .square:focus {
   background: #ddd;
 }

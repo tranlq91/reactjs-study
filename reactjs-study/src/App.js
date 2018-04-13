@@ -129,13 +129,16 @@ class Game extends React.Component {
     }
     console.log('winner', winner);
     const steps = history.map((state, stepNumber) => {
+       let className = '';
+       if(stepNumber == this.state.stepNumber)
+          className = 'chosenStep';
        const desc = stepNumber ? 
         ' Go to move #' + stepNumber:
         ' Go to game start';
 
       return(
-        <li key={stepNumber}>
-            <button onClick={() => this.jumpTo(stepNumber)}>{desc}</button>
+        <li key={stepNumber} >
+            <button onClick={() => this.jumpTo(stepNumber)} className={className}>{desc}</button>
         </li>
       );
     });
