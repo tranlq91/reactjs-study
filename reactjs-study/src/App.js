@@ -10,8 +10,6 @@ function Square (props) {
       text = props.value.text;
       if (props.value.isWinner === true) {
         className += " square-boil";
-        console.log('this.props', props.value);
-        console.log('className', className);
       }
       
     }
@@ -26,7 +24,7 @@ function Square (props) {
   
 }
 
-class Board extends React.Component {
+export class Board extends React.Component {
   renderSquare(i) {
     return (
       <Square key={i}
@@ -62,7 +60,7 @@ class Board extends React.Component {
   }
 }
 
-class Game extends React.Component {
+export class Game extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -186,7 +184,6 @@ function calculateWinner (squares) {
       squares[a].isWinner = true;
       squares[b].isWinner = true;
       squares[c].isWinner = true;
-      console.log('founded');
       return squares[a];
     }
   }
@@ -195,5 +192,5 @@ function calculateWinner (squares) {
 
 // ===============
 
-export default Game;
+
 

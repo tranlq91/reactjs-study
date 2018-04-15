@@ -1,9 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import {Game, Board} from './App';
+import {LoggingButton} from './TestEvent';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App gammer="Trandeptrai" />, document.getElementById('root'));
+ReactDOM.render(
+    <div>
+        <Game gammer="Trandeptrai" />
+        <LoggingButton />
+       
+    </div>, document.getElementById('root')
+);
 registerServiceWorker();
 
 
